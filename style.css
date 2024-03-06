@@ -1,0 +1,39 @@
+:root {
+  --background: #031f16;
+  --text: #c1f8e7;
+  --accent: #60f7c9;
+  --gray: #596662;
+}
+
+html {
+  width: 100dvw;
+  height: 100dvh;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+h1 {
+  color: var(--accent);
+}
