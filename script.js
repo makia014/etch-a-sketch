@@ -1,7 +1,8 @@
+// create a grid of squares
 const grid = document.querySelector(".squares");
 const n = 16;
 i = 0;
-numberOfSquares = n * n;
+const numberOfSquares = n * n;
 while (i <= numberOfSquares) {
   const row = document.createElement("div");
   row.classList.add("row", "flex");
@@ -13,3 +14,16 @@ while (i <= numberOfSquares) {
   grid.appendChild(row);
   i += n;
 }
+
+// create a function to add a gray background color
+const colorGray = (el) => {
+  el.classList.add("gray");
+};
+
+// create a hover effect for the grid div elements
+const divs = document.querySelectorAll(".square");
+divs.forEach((div) => {
+  div.addEventListener("mouseover", (e) => {
+    colorGray(e.target);
+  });
+});

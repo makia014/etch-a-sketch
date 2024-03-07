@@ -69,3 +69,7 @@ h1 {
   height: 100%;
   flex: 1;
 }
+
+.gray {
+  background-color: var(--gray);
+}
