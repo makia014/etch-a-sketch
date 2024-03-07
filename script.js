@@ -48,14 +48,34 @@ const colorGray = (el) => {
   el.classList.add("gray");
 };
 
+// create a function to add a colorful background
+const colorize = (el) => {
+  let color = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(
+    Math.random() * 256
+  )}, ${Math.floor(Math.random() * 256)})`;
+  el.style.backgroundColor = color;
+};
+
 // create a hover effect for the grid div elements
-const setHoverEffect = () => {
+const setHoverEffect = (type) => {
   const divs = document.querySelectorAll(".square");
   divs.forEach((div) => {
     div.addEventListener("mouseover", (e) => {
-      colorGray(e.target);
+      switch (type) {
+        case "color":
+          colorize(e.target);
+          break;
+        default:
+          colorGray(e.target);
+      }
     });
   });
 };
 
 setHoverEffect();
+
+// create a colorful effect
+const colorBtn = document.querySelector(".color");
+colorBtn.addEventListener("click", (e) => {
+  setHoverEffect(e.target.textContent);
+});
