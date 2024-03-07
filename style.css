@@ -40,10 +40,36 @@ body {
   gap: 2rem;
 }
 
+header {
+  gap: 2rem;
+}
+
 h1 {
   color: var(--accent);
   font-size: 3rem;
   font-weight: 700;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  background-color: var(--text);
+  box-shadow: 3px 4px 0 var(--gray);
+  color: var(--background);
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 200ms;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--accent);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 4px);
 }
 
 .squares {
